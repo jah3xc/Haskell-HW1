@@ -17,8 +17,11 @@ prob1 x
 -- @param  Char
 -- @output Int
 -- @description:
-prob2 :: a
-prob2 = undefined
+prob2 :: Char -> Int
+prob2 x 
+  | x `elem` ['0'..'9'] = read [x] :: Int
+  | otherwise = -1
+
 -- Function prob3
 -- @type   
 -- @param  function of type a -> b
