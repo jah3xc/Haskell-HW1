@@ -29,8 +29,8 @@ prob2 x
 -- @param  input of type a
 -- @output tuple of type (b, c)
 -- @description:
-prob3 :: a
-prob3 = undefined
+-- prob3 :: a -> a -> Char => (Char, Int)
+prob3 func1 func2 arg = (func1 arg, func2 arg)
 -- prob4
 -- @type   
 -- @param  Bool
