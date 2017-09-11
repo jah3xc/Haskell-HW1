@@ -5,8 +5,13 @@ import Test.Hspec -- <- DO NOT REMOVE THIS
 -- @param  Char
 -- @output Char
 -- @description:
-prob1 :: a
-prob1 = undefined
+prob1 :: Char -> Char
+prob1 x
+  | x == 'z' = 'a'
+  | x == 'Z' = 'A'
+  | elem x ['a'..'z'] = succ(x) 
+  | elem x ['A'..'Z'] = succ(x)
+  | otherwise = x
 -- Function prob2
 -- @type   
 -- @param  Char
