@@ -49,13 +49,18 @@ prob4 n m o
 -- @output Bool
 -- @description:
 prob5 :: Int -> Bool
-prob5 x = if (x `mod` 4 == 0)
-           then if (x `mod` 100 == 0)
-                  then if (x `mod` 400 == 0)
-                          then True
-                          else False
-                  else True
-            else False
+prob5 x
+  | mod x 4 == 0 && mod x 100 /= 0  = True
+  | mod x 4 == 0 && mod x 100 == 0 && mod x 400 ==0 = True
+  | otherwise = False
+
+--prob5 x  if (x `mod` 4 == 0)
+--            then if (x `mod` 100 == 0)
+--                  then if (x `mod` 400 == 0)
+--                          then True
+--                          else False
+--                  else True
+--            else False
 
 -- All Unit Tests Below This Line --
 -- Don't touch anything below this line
