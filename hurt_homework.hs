@@ -38,10 +38,11 @@ prob3 func1 func2 arg = (func1 arg, func2 arg)
 -- @param  input of type a
 -- @output output of type a
 -- @description:
-prob4 :: Bool -> [Char] -> [Char] -> [Char]
-prob4 x arg1 arg2 = if x 
-                then arg1
-                else arg2
+prob4 :: Bool -> a -> a -> a
+prob4 n m o 
+  | n = m
+  | otherwise = o
+
 -- prob5
 -- @type   
 -- @param  Integer
