@@ -45,9 +45,14 @@ prob4 = undefined
 -- @param  Integer
 -- @output Bool
 -- @description:
-prob5 :: a
-prob5 = undefined
-
+prob5 :: Int -> Bool
+prob5 x = if (x `mod` 4 == 0)
+           then if (x `mod` 100 == 0)
+                  then if (x `mod` 400 == 0)
+                          then True
+                          else False
+                  else True
+            else False
 
 -- All Unit Tests Below This Line --
 -- Don't touch anything below this line
