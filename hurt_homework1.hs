@@ -4,7 +4,7 @@ import Test.Hspec -- <- DO NOT REMOVE THIS
 -- @type   
 -- @param  Char
 -- @output Char
--- @description:
+-- @description: we use a combination of the elem and succ prelude functions to accomplish this. First we check if the Char is either a 'z' or 'Z' as succ will not wrap around. After checking those two conditions, we simply check to see if the char is in the list of 'A'..'Y' or 'a'..'y'. If so, we can just use the succ function on it to get the right answer.
 prob1 :: Char -> Char
 prob1 x
   | x == 'z' = 'a'
