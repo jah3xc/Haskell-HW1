@@ -16,7 +16,7 @@ prob1 x
 -- @type   
 -- @param  Char
 -- @output Int
--- @description:
+-- @description: problem 2 is takes in a char and outputs an Int. for this we check if the input is an element of 0..9, which is a list of possible number values. If it is, we use the read function to print the inputted char as an Int. If it isn't an element of the list, use otherwise to return a -1
 prob2 :: Char -> Int
 prob2 x 
   | x `elem` ['0'..'9'] = read [x] :: Int
@@ -28,7 +28,7 @@ prob2 x
 -- @param  function of type a -> c
 -- @param  input of type a
 -- @output tuple of type (b, c)
--- @description:
+-- @description: takes in two different functions and an  arg and applies both functions to the arguement. As we didn't cover map yet, we returned the two functions and the arg as a tuple.
 prob3 :: (a->b) -> (a->c) -> a -> (b,c)
 prob3 func1 func2 arg = (func1 arg, func2 arg)
 -- prob4
@@ -37,7 +37,7 @@ prob3 func1 func2 arg = (func1 arg, func2 arg)
 -- @param  input of type a
 -- @param  input of type a
 -- @output output of type a
--- @description:
+-- @description: we use guards to check if the Bool(n) is true or false. If it's true, it'll return the first arguement (m), and if false (or otherwise) the o.
 prob4 :: Bool -> a -> a -> a
 prob4 n m o 
   | n = m
@@ -47,20 +47,12 @@ prob4 n m o
 -- @type   
 -- @param  Integer
 -- @output Bool
--- @description:
+-- @description: leap years are found in two different occasions: if it's a product of four and NOT a product of 100 or if it's a product of four, a product of 100 and a product of 400. We used guards to check these two conditions. If it didn't meet this, we used the otherwise to return a false.
 prob5 :: Int -> Bool
 prob5 x
   | mod x 4 == 0 && mod x 100 /= 0  = True
   | mod x 4 == 0 && mod x 100 == 0 && mod x 400 ==0 = True
   | otherwise = False
-
---prob5 x  if (x `mod` 4 == 0)
---            then if (x `mod` 100 == 0)
---                  then if (x `mod` 400 == 0)
---                          then True
---                          else False
---                  else True
---            else False
 
 -- All Unit Tests Below This Line --
 -- Don't touch anything below this line
